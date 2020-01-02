@@ -1,6 +1,6 @@
-use std::io;
-use std::cmp::Ordering;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 mod common;
 
@@ -17,8 +17,7 @@ fn main() {
         println!("Please enter the your guess.");
 
         let mut guess = String::new();
-        io::stdin().read_line(&mut guess)
-            .expect("Failed read line");
+        io::stdin().read_line(&mut guess).expect("Failed read line");
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
